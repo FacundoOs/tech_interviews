@@ -1,15 +1,11 @@
 class Car
   attr_accessor :color
 
-  def initialize(x = {})
-    @color = x[:color]
-  end
+  def initialize(options = {})
+    @color = options[:color]
+end
 
-  car3= Car.new(color: 'yellow')
-
-
-  def paint(_color)
-    
-
+  def paint(x)
+    x.color = 'yellow'
   end
 end
