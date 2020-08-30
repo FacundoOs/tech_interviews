@@ -1,11 +1,12 @@
 class Car
-  attr_accessor :color
+  attr_accessor :color, :driver
 
-  def initialize(options = {})
-    @color = options[:color]
+  def initialize(x = {})
+    @color = x[:color]
+    @driver = x[:driver]
 end
 
-  def paint(x)
-    x.color = 'yellow'
+  def paint(change_color)
+    change_color.color = 'yellow'
   end
 end
